@@ -125,6 +125,10 @@ p {
         .issue-num {
           margin-bottom: 1.2rem;
         }
+        .issue-buy:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
   }
