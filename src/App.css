@@ -46,7 +46,7 @@ p {
 .header-logo {
   padding-top: 20px;
   position: fixed;
-  padding-left: 2rem;
+  padding-left: 20px;
   z-index: 2;
   .logo {
     width: 260px;
@@ -124,7 +124,6 @@ p {
       .issue-desc {
         .issue-num {
           margin-bottom: 1.2rem;
-          margin-top: 0.5rem;
         }
       }
     }
@@ -184,6 +183,12 @@ p {
 }
 
 @media screen and (max-width: 500px) {
+  .header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+  }
   .issues {
     .issue {
       height: 85vh;

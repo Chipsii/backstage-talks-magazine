@@ -120,7 +120,7 @@ const Fullpage = () => {
                                     <p className='issue-num'>Issue #{item.issuenum}</p>
                                     <p style={item.id === 1 ? { color: '#ff608c' } : { color: '#fff' }}>BUY HERE <span style={{ color: '#251d20' }}>{item.buy1}</span></p>
                                     {
-                                        item.buy2 ? <p>BUY HERE {item.buy2}</p> : ''
+                                        item.buy2 ? <p style={item.id === 1 ? { color: '#ff608c' } : { color: '#fff' }}>BUY HERE <span style={{ color: '#251d20' }}>{item.buy2}</span></p> : ''
                                     }
                                     <p>or in <span style={item.id === 1 ? { color: '#ff608c' } : { color: '#fff' }}>selected stores</span> </p>
                                 </div>
