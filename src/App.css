@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --issue-7: #ff608c;
+  --issue-6: #ffffff;
+  --issue-5: #00c1b5;
+  --issue-4: #ff6519;
+  --issue-3: #ffbe00;
+  --issue-2: #1d3fbb;
+  --issue-1: #e30512;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  color: #251d20;
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+p {
+  color: #251d20;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.header-logo {
+  padding-top: 20px;
+  position: fixed;
+  padding-left: 2rem;
+  z-index: 2;
+  .logo {
+    width: 260px;
+    height: auto;
+  }
+}
+
+.footer {
+  .description {
+    position: fixed;
+    bottom: 10px;
+    left: 22px;
+    width: 320px;
+    margin-top: 0;
+    .copyright {
+      display: block;
+      font-size: 12px;
+      font-weight: normal;
+      .link {
+        text-decoration: underline;
+      }
+      .link:hover {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    .policy:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .menu {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    width: 200px;
+    text-align: right;
+    z-index: 3;
+    font-size: 18px;
+    line-height: 1.6;
+    .menulink:hover {
+      text-decoration: underline;
+    }
+  }
+  .contact {
+    text-align: right;
+    position: fixed;
+    right: 15px;
+    top: 20px;
+    .mail {
+      font-weight: bold;
+    }
+    .mail:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.issues {
+  text-align: center;
+  .issue {
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    .issue-info {
+      .issue-cover {
+        padding-top: 2rem;
+        height: 80vh;
+        .img {
+          width: auto;
+          height: 100%;
+        }
+      }
+      .issue-desc {
+        .issue-num {
+          margin-bottom: 1.2rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header-logo {
+    position: static;
+  }
+  .footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .description {
+      position: static;
+      padding-left: 2rem;
+      padding-bottom: 2rem;
+    }
+    .menu {
+      display: none;
+    }
+    .contact {
+      position: static;
+      padding-bottom: 2rem;
+      margin-right: 15px;
+    }
+  }
+  .issues {
+    .issue {
+      height: 120vh;
+      .issue-info {
+        .issue-cover {
+          height: 100vh;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .issues {
+    .issue {
+      height: 100vh;
+      .issue-info {
+        margin: 2rem;
+        .issue-cover {
+          height: 80vh;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .issues {
+    .issue {
+      height: 85vh;
+      .issue-info {
+        .issue-cover {
+          height: auto;
+          .img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .description {
+      padding-left: 0;
+    }
+    .description,
+    .menu {
+      text-align: center;
+    }
+    .contact {
+      margin-right: 0;
+    }
+  }
+}
